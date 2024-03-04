@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "AddUser";
+}
+
+
+@using (Html.BeginForm("ChangeVal", "Home", FormMethod.Get))
+{
+    <div>
+        <label>Privato</label>
+        <input checked="checked" name="UserType" type="radio" value="Privato" />
+
+        <label>P. Iva</label>
+        <input name="UserType" type="radio" value="Azienda" />
+    </div>
+}
+
+
+@{
+
+}
+<form asp-controller="Home" asp-action="Add" method="post" class="mt-5">
+    <h3 class="mb-4">Inserisci nuova anagrafica:</h3>
+    <div class="form-group">
+        <label for="Nome">Nome:</label>
+        <input id="Nome" name="Nome" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Cognome">Cognome:</label>
+        <input id="Cognome" name="Cognome" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Citta">Città:</label>
+        <input id="Citta" name="Citta" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Cap">Cap:</label>
+        <input id="Cap" name="Cap" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Indirizzo">Indirizzo:</label>
+        <input id="Indirizzo" name="Indirizzo" type="text" class="form-control" />
+    </div>
+</form>
+
+
