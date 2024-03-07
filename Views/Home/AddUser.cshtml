@@ -19,7 +19,7 @@
     {
         using (Html.BeginForm("AddPrivato", "Home", FormMethod.Post))
         {
-            <form asp-controller="Home" asp-action="Add" method="post" class="mt-5">
+            
                 <h3 class="mb-4">Inserisci nuova anagrafica:</h3>
                 <div class="form-group">
                     <label for="Nome">Nome:</label>
@@ -47,7 +47,7 @@
                     <input id="Indirizzo" name="Indirizzo" type="text" class="form-control" />
                 </div>
                 <button>Invia Dati</button>
-            </form>
+            
         }
 
     }
@@ -55,7 +55,7 @@
     {
         using (Html.BeginForm("AddPiva", "Home", FormMethod.Post))
         {
-            <form asp-controller="Home" asp-action="Add" method="post" class="mt-5">
+            
                 <h3 class="mb-4">Inserisci nuova anagrafica:</h3>
                 <div class="form-group">
                     <label for="RagioneSociale">Ragione Sociale:</label>
@@ -78,7 +78,7 @@
                     <input id="Indirizzo" name="Indirizzo" type="text" class="form-control" />
                 </div>
                 <button>Invia Dati</button>
-            </form>
+            
         }
 
     }

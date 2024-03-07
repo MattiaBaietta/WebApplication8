@@ -21,8 +21,26 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Informazioni", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Contatto", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Aggiungi Anagrafica", "AddUser", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Aggiungi Spedizione", "AddDelivery", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Controlla Spedizioni", "Index", "CheckSped", new { area = "" }, new { @class = "nav-link" })</li>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Aggiungi Anagrafica", "AddUser", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Aggiungi Spedizione", "AddDelivery", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Aggiorna Spedizione", "EditDelivery", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Statistiche", "Stats", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+
+
+
+
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Effettua Login", "Index", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+
+
                 </ul>
             </div>
         </div>

@@ -7,57 +7,57 @@
 
 @using (Html.BeginForm("AddDeliveryButton", "Home", FormMethod.Post))
 {
-<form asp-controller="Home" asp-action="Add" method="post" class="mt-5">
-    <h3 class="mb-4">Inserisci nuova spedizione:</h3>
-    <div class="form-group">
-        <label for="Nome">Nome Cliente:</label>
-        <select name="Idcliente">
-            @{ foreach (var cf in ViewBag.CFiscale)
-                {
-                    <option value="@cf.CFiscale">
-                        @cf.Nome @cf.Cognome (Privato)
+   
+        <h3 class="mb-4">Inserisci nuova spedizione:</h3>
+        <div class="form-group">
+            <label for="Nome">Nome Cliente:</label>
+            <select name="Idcliente">
+                @{ foreach (var cf in ViewBag.CFiscale)
+                    {
+                        <option value="@cf.CFiscale">
+                            @cf.Nome @cf.Cognome (Privato)
 
-                    </option>
+                        </option>
+                    }
+                    foreach (var pi in ViewBag.PIva)
+                    {
+                        <option value="@pi.PIva">
+                            @pi.RagioneSociale (Azienda)
+                        </option>
+                    }
                 }
-                foreach (var pi in ViewBag.PIva)
-                {
-                    <option value="@pi.PIva">
-                        @pi.RagioneSociale (Azienda)
-                    </option>
-                }
-            }
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="DataInvio">Data Spedizione:</label>
-        <input id="DataInvio" name="DataInvio" type="date" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="Peso">Peso in kg:</label>
-        <input id="Peso" name="Peso" type="number" class="form-control" />
-    </div>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="DataInvio">Data Spedizione:</label>
+            <input id="DataInvio" name="DataInvio" type="date" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Peso">Peso in kg:</label>
+            <input id="Peso" name="Peso" type="number" class="form-control" />
+        </div>
 
-    <div class="form-group">
-        <label for="CittaDest">Città di destinazione:</label>
-        <input id="CittaDest" name="CittaDest" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="NomeDest">Nome Destinatario:</label>
-        <input id="NomeDest" name="NomeDest" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="Indirizzo">Indirizzo di destinazione:</label>
-        <input id="Indirizzo" name="Indirizzo" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="Costo">Costo spedizione:</label>
-        <input id="Costo" name="Costo" type="text" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="DataDest">Data di arrivo:</label>
-        <input id="DataDest" name="DataDest" type="date" class="form-control" />
-    </div>
+        <div class="form-group">
+            <label for="CittaDest">Città di destinazione:</label>
+            <input id="CittaDest" name="CittaDest" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="NomeDest">Nome Destinatario:</label>
+            <input id="NomeDest" name="NomeDest" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Indirizzo">Indirizzo di destinazione:</label>
+            <input id="Indirizzo" name="Indirizzo" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="Costo">Costo spedizione:</label>
+            <input id="Costo" name="Costo" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="DataDest">Data di arrivo:</label>
+            <input id="DataDest" name="DataDest" type="date" class="form-control" />
+        </div>
 
-    <button>Inserisci Spedizione</button>
-</form>
+        <button>Inserisci Spedizione</button>
+
 }

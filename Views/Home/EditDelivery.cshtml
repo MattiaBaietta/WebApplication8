@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "EditDelivery";
+}
+
+<h2>EditDelivery</h2>
+
+@using (Html.BeginForm("EditDeliveryButton", "Home", FormMethod.Get))
+{
+    <label>Scegli il numero di spedizione:</label>
+    <select name="idspedizione">
+        @foreach (int i in ViewBag.Tracking)
+        {
+        <option value="@i">@i</option>
+        }
+
+    </select>
+    <label>Luogo Attuale</label>
+    <input type="text" name="LuogoAttuale" />
+    <label>Descrizione</label>
+    <input type="text" name="Descrizione" />
+    <label>Stato Spedizione</label>
+    <select name="Stato">
+        <option value="In Transito">In transito</option>
+        <option value="In Consegna">In consegna</option>
+        <option value="Consegnato">Consegnato</option>
+        <option value="Non Consegnato">Non Consegnato</option>
+    </select>
+    <button type="submit">Aggiorna stato spedizione</button>
+}

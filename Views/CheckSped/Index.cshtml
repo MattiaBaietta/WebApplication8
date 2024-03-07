@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("CheckSpedButton", "CheckSped", FormMethod.Get))
+{
+    <label>Inserisci il numero di spedizione:</label>
+    <input type="text" name="id" />
+    <label>Inserisci la p.iva o codice fiscale:</label>
+    <input type="text" name="user" />
+    <button type="submit">Ricerca Spedizione</button>
+}
+
+@if (Model != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Luogo Attuale</th>
+                <th>Descrizione</th>
+                <th>Data Aggiornamento</th>
+                <th>Stato Spedizione</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var stato in Model)
+            {
+                <tr>
+                    <td>@stato.LuogoAttuale</td>
+                    <td>@stato.Descrizione</td>
+                    <td>@stato.DataAgg</td>
+                    <td>@stato.Stato</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

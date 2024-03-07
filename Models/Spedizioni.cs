@@ -15,7 +15,6 @@ namespace WebApplication8.Models
         public string NomeDest { get; set; }
         public int Costo { get; set; }
         public DateTime DataDest { get; set; }
-        public string Stato { get; set; }
         public string PIva { get; set; }
         public string CFiscale { get; set; }
     }

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Stats";
+}
+
+<h2>Stats</h2>
+
+@using (Html.BeginForm("ShowStats", "Home", FormMethod.Get))
+{
+    <button value="Consegna">Consegne in Data odierna</button>
+    <button value="Attesa">Numero Spedizioni in "attesa di consegna"</button>
+    <button value="Citta">Spedizioni divise per Città</button>
+}
+
+@{
+    if (ViewBag.ShowStats == "Consegna")
+    {
+    }
+    else
+    {
+
+    }
+}
